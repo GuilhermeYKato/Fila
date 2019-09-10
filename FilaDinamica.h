@@ -42,7 +42,7 @@ void enfileiraDinamica(ObjetoDinamico item, FilaDinamica *fila) {
 
     if (estaVaziaDinamica(fila)) {
 
-        aux = fila->fim = fila->inicio;
+        fila->fim = fila->inicio = aux;
 
     } else {
 
