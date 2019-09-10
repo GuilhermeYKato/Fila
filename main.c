@@ -72,6 +72,7 @@ int main(int argc, char** argv) {
         printf("Ultimo da Fila: %i\n", ultimoDinamica(&filaDinamica).chave);
         
         imprimeFilaDinamica(&filaDinamica);
+        destroiFilaDinamica(&filaDinamica);
         
     } else {
         printf("\tEscolha Invalida\n\n\tERRO ERRO ERRO\n\n");
