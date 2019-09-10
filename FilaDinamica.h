@@ -59,16 +59,18 @@ ObjetoDinamico desenfileiraDinamica(FilaDinamica *fila) {
     ObjetoDinamico obj;
 
     if (!estaVaziaDinamica(fila)) {
+        
         aux = fila->inicio;
         obj = aux->obj;
         fila->inicio = fila->inicio->proximo;
         free(aux);
         fila->contador--;
-        return (obj);
+        
     } else {
         printf("\n\tERRO PILHA VAZIA\n\n");
+        obj.chave = -1;
     }
-
+    return (obj);
 }
 
 void imprimeFilaDinamica(FilaDinamica *fila) {
