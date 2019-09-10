@@ -40,12 +40,25 @@ int main(int argc, char** argv) {
         ObjetoDinamico obj;
         iniciaFilaDinamica(&filaDinamica);
         
+        printf("\n");
         obj.chave = 3;
         enfileiraDinamica(obj, &filaDinamica);
+        printf("Objeto enfileirado: %i\n", obj.chave);
         
         obj.chave = 8;
         enfileiraDinamica(obj, &filaDinamica);
+        printf("Objeto enfileirado: %i\n", obj.chave);
         
+        printf("\n");
+        printf("Elemento Removido: %i\n", desenfileiraDinamica(&filaDinamica).chave);
+        printf("Elemento Removido: %i\n", desenfileiraDinamica(&filaDinamica).chave);
+
+        printf("\n");
+        printf("Tamanho Da Fila: %i\n", tamanhoFilaDinamica(&filaDinamica));
+        printf("Primeiro da Fila: %i\n", primeiroDinamica(&filaDinamica).chave);
+        printf("Ultimo da Fila: %i\n", ultimoDinamica(&filaDinamica).chave);
+        
+        imprimeFilaDinamica(&filaDinamica);
         
     } else {
         printf("\tEscolha Invalida\n\n\tERRO ERRO ERRO\n\n");
