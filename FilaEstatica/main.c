@@ -33,6 +33,7 @@ bool estaCheia(FilaEstatica *fila){
 void iniciaFila(FilaEstatica *fila){
     fila->inicio = 0;
     fila->fim = -1;
+    fila->contador = 0;
 }
 
 int incrementaIndice(int i){ //BUFFER CIRCULAR
