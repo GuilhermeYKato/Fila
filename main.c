@@ -42,11 +42,23 @@ int main(int argc, char** argv) {
         iniciaFilaDinamica(&filaDinamica);
         
         printf("\n");
-        obj.chave = 3;
+        obj.chave = 8;
         enfileiraDinamica(obj, &filaDinamica);
         printf("Objeto enfileirado: %i\n", obj.chave);
         
-        obj.chave = 8;
+        obj.chave = 10;
+        enfileiraDinamica(obj, &filaDinamica);
+        printf("Objeto enfileirado: %i\n", obj.chave);
+        
+        obj.chave = 12;
+        enfileiraDinamica(obj, &filaDinamica);
+        printf("Objeto enfileirado: %i\n", obj.chave);
+        
+        printf("\n");
+        printf("Elemento Removido: %i\n", desenfileiraDinamica(&filaDinamica).chave);
+        
+        printf("\n");
+        obj.chave = -1;
         enfileiraDinamica(obj, &filaDinamica);
         printf("Objeto enfileirado: %i\n", obj.chave);
         
