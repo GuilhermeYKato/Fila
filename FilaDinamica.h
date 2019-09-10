@@ -67,7 +67,7 @@ ObjetoDinamico desenfileiraDinamica(FilaDinamica *fila) {
         fila->contador--;
         
     } else {
-        printf("\n\tERRO PILHA VAZIA\n\n");
+        printf("\n\tERRO PILHA VAZIA\n\nNão Remove\n");
         obj.chave = -1;
     }
     return (obj);
