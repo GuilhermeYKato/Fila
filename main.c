@@ -6,6 +6,7 @@
 int main(int argc, char** argv) {
     int ESCOLHA = 0;
     printf("1 - Fila Estatica\n2 - Fila Dinamica\n");
+    printf("Número: ");
     scanf("%i", &ESCOLHA);
     if (ESCOLHA == 1) {
 
@@ -63,12 +64,7 @@ int main(int argc, char** argv) {
     } else {
         printf("\tEscolha Invalida\n\n\tERRO ERRO ERRO\n\n");
     }
-
-
-
-
-
-
+    
     return (EXIT_SUCCESS);
 }
 
