@@ -117,8 +117,7 @@ ObjetoDinamico ultimoDinamica(FilaDinamica *fila) {
 }
 
 void destroiFilaDinamica(FilaDinamica *fila) {
-
-
+    free(fila);
 }
 
 #endif /* FILADINAMICA_H */
