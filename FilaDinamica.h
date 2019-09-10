@@ -55,13 +55,29 @@ void enfileiraDinamica(ObjetoDinamico item, FilaDinamica *fila) {
 }
 
 ObjetoDinamico desenfileiraDinamica(FilaDinamica *fila) {
+    PtrNoFila aux;
+    ObjetoDinamico obj;
 
+    if (!estaVaziaDinamica(fila)) {
+        aux = fila->inicio;
+        obj = aux->obj;
+        fila->inicio = fila->inicio->proximo;
+        free(aux);
+        fila->contador--;
+        return (obj);
+    } else {
+        printf("\n\tERRO PILHA VAZIA\n\n");
+    }
 
 }
 
 void imprimeFilaDinamica(FilaDinamica *fila) {
-
-
+    printf("\n\t[ ");
+    PtrNoFila ptr;
+    for (ptr = fila->inicio; ptr != NULL; ptr = ptr->proximo) {
+        printf("%d ", ptr->obj.chave);
+    }
+    printf(" ]\n");
 }
 
 
@@ -71,12 +87,30 @@ int tamanhoFilaDinamica(FilaDinamica *fila) {
 }
 
 ObjetoDinamico primeiroDinamica(FilaDinamica *fila) {
+    ObjetoDinamico ret;
+    if (estaVaziaDinamica(fila)) {
+        printf("Pilha Vazia Troxa\n");
+        ret.chave = -1;
+    } else {
+        ret = fila->inicio->obj;
+
+    }
+    return (ret);
 
 
 }
 
 ObjetoDinamico ultimoDinamica(FilaDinamica *fila) {
+    ObjetoDinamico ret;
+    if (estaVaziaDinamica(fila)) {
+        printf("Pilha Vazia Troxa\n");
+        ret.chave = -1;
+    } else {
+        ret = fila->fim->obj;
 
+
+    }
+    return (ret);
 
 }
 
